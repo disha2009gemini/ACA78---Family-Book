@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+            <h1>
+                My Family Book
+            </h1>
+
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="family_member_image" width="150px" height="200px">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();" id="nextButton">Next</button>
+           <!-- Debug the above code to create a button with onclick functionality as given below-->
+            <!-- <button onclick="update();">Next</button>  -->
+
+            <p>
+
+                <h4 id="Disha"></h4>
+            </p>
+
+            <p>
+                <h4 id="Digantha"></h4>
+            </p>
+
+            <p>
+                <h4 id="Ravi"></h4>
+            </p>
+
+            <p>
+                <h4 id="Darsh"></h4>
+            </p>
+          
+        </center>
+
+        <script src="main.js"></script>
+    </body>
+
+   <script>
+    var images = ["familyBook.jpg", "disha.jpg", "digantha.jpg", "ravi.jpg", "darsh.jpg"];
+    var names = ["Family Book","Disha Ravishankar", "Digantha Ravishankar", "Ravishankar R", "Darsh Ravishankar"];
+    var i = 0;
+    function update(){
+        i++;
+        var numbers_of_family_member_in_array = 4;
+        if(i > numbers_of_family_member_in_array){
+          i = 0;
+        }
+    
+        var updatedImage = images[i];
+        var updatedName = names[i];
+ 
+        document.getElementById("family_member_image").src = updatedImage;
+        document.getElementById("family_member_name").innerHTML = updatedName;
+    }
+</script>
+</html>
